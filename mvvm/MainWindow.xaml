@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Views" Height="450" Width="800"
         FontSize="14">
-    <Grid>
+    <Grid Margin="25">
         <views:YoutubeViewersView/>
     </Grid>
 </Window>

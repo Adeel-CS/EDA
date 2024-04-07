@@ -7,11 +7,12 @@
             <SolidColorBrush x:Key="BorderPrimary" Color="Black"/>
             <Style TargetType="Button">
                 <Setter Property="Foreground" Value="White"/>
-                <Setter Property="Background" Value="#547AFF"/>
+                <Setter Property="Background" Value="#313ff7"/>
                 <Setter Property="Padding" Value="15 10"/>
                 <Setter Property="Cursor" Value="Hand"/>
                 <Setter Property="TextBlock.TextAlignment" Value="Center"/>
                 <Setter Property="Template">
+                    <!--This is for changing the default of the button settings--> 
                     <Setter.Value>
                         <ControlTemplate TargetType="Button">
                             <Border CornerRadius="3" 
@@ -30,7 +31,7 @@
                                 <Storyboard>
                                     <ColorAnimation
                                         Storyboard.TargetProperty="Background.(SolidColorBrush.Color)"
-                                        To="Blue" Duration="0:0:0.1"/>
+                                        To="#232eba" Duration="0:0:0.1"/>
                                 </Storyboard>
                             </BeginStoryboard>
                         </Trigger.EnterActions>
@@ -39,7 +40,7 @@
                                 <Storyboard>
                                     <ColorAnimation
                                         Storyboard.TargetProperty="Background.(SolidColorBrush.Color)"
-                                        To="#547AFF" Duration="0:0:0.1"/>
+                                        To="#313ff7" Duration="0:0:0.1"/>
                                 </Storyboard>
                             </BeginStoryboard>
                         </Trigger.ExitActions>

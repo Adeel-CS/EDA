@@ -1,4 +1,6 @@
-﻿using System;
+﻿using mvvm.Models;
+using mvvm.Stores;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,15 +10,21 @@ namespace mvvm.ViewModels
 {
     internal class YouTubeViewersDetailsViewModel : ViewModelBase
     {
-        public string Username { get; }
-        public string IsSubscribedDisplay { get; }
+        private readonly SelectedYouTubeViewerStore _selectedYouTubeViewerStore;
+
+        private YouTubeViewer SelectedYouTubeViewer => _selectedYouTubeViewerStore.SelectedYouTubeViewer;
+
+        public bool HasSelectedYouTubeViewer => SelectedYouTubeViewer != null;
+        public string Username => SelectedYouTubeViewer?.Username ?? "Unknown";
+        public string IsSubscribedDisplay => (SelectedYouTubeViewer?.IsSubscribed ?? false) ? "Yes" : "No";
+        public string IsMember => (SelectedYouTubeViewer?.IsMember ?? false) ? "Yes" : "No";
+
         public string IsMemberDisplay { get; }
 
-        public YouTubeViewersDetailsViewModel()
+        public YouTubeViewersDetailsViewModel(SelectedYouTubeViewerStore selectedYouTubeViewerStore)
         {
-            Username = "RandomNigga";
-            IsSubscribedDisplay = "Yes";
-            IsMemberDisplay = "No";
+
+            _selectedYouTubeViewerStore = selectedYouTubeViewerStore;
         }
 
     }

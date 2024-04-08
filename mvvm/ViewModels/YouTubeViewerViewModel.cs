@@ -1,4 +1,5 @@
-﻿using System;
+﻿using mvvm.Stores;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,10 +15,10 @@ namespace mvvm.ViewModels
         public YouTubeViewersDetailsViewModel? YouTubeViewersDetailsViewModel { get; }
         public ICommand? AddYouTubeViewersCommand { get; }
 
-        public YouTubeViewerViewModel()
+        public YouTubeViewerViewModel(SelectedYouTubeViewerStore _selectedYouTubeViewerStore)
         {
-            YouTubeViewersListingViewModel = new YouTubeViewersListingViewModel();
-            YouTubeViewersDetailsViewModel = new YouTubeViewersDetailsViewModel();
+            YouTubeViewersListingViewModel = new YouTubeViewersListingViewModel(_selectedYouTubeViewerStore);
+            YouTubeViewersDetailsViewModel = new YouTubeViewersDetailsViewModel(_selectedYouTubeViewerStore);
         }
 
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using mvvm.Stores;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -12,9 +13,9 @@ namespace mvvm.ViewModels
         private readonly ObservableCollection<YouTubeViewersListingItemViewModel>? _youTubeViewersListingItemViewModels;
         public IEnumerable<YouTubeViewersListingItemViewModel> YouTubeViewersListingItemViewModels => _youTubeViewersListingItemViewModels;
 
-        public YouTubeViewersListingViewModel()
+        public YouTubeViewersListingViewModel(SelectedYouTubeViewerStore _selectedYouTubeViewerStore)
         {
-            _youTubeViewersListingItemViewModels = new ObservableCollection<YouTubeViewersListingItemViewModel>();
+            _youTubeViewersListingItemViewModels = new ObservableCollection<YouTubeViewersListingItemViewModel>((IEnumerable<YouTubeViewersListingItemViewModel>)_selectedYouTubeViewerStore);
             _youTubeViewersListingItemViewModels.Add(new YouTubeViewersListingItemViewModel("Jhon"));
             _youTubeViewersListingItemViewModels.Add(new YouTubeViewersListingItemViewModel("Ricky"));
             _youTubeViewersListingItemViewModels.Add(new YouTubeViewersListingItemViewModel("Alan"));

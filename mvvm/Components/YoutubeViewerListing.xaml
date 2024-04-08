@@ -88,8 +88,8 @@
                                                         </Style.Triggers>
                                                     </Style>
                                                 </StackPanel.Resources>
-                                                <Button Content="Edit"/>
-                                                <Button Content="Delet"/>
+                                                <Button Command="{Binding EditCommand}" Content="Edit"/>
+                                                <Button Command="{Binding DeleteCommand}" Content="Delet"/>
                                             </StackPanel>
                                         </Border>
                                     </custom:DropdownMenu>

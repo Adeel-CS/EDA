@@ -16,7 +16,9 @@
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Text="Ali" FontSize="21" Grid.Row="0"/>
+                <TextBlock Text="{Binding Username}" FontSize="21" Grid.Row="0"/>
+                
+                
                 <Grid Grid.Row="1" Margin="0 20 0 0" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
@@ -24,8 +26,9 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Column="0" FontWeight="Bold"
                                Text="Is Subscribed"/>
-                    <TextBlock Grid.Column="1" Text="Yes" Margin="20 0 0 0"/>
+                    <TextBlock Grid.Column="1" Text="{Binding IsSubscribedDisplay}" Margin="20 0 0 0"/>
                 </Grid>
+                
                 <Grid Grid.Row="2" Margin="0 20 0 0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>

@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using mvvm.ViewModels;
+using System.Configuration;
 using System.Data;
 using System.Windows;
 
@@ -11,7 +12,10 @@ namespace mvvm
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            MainWindow = new MainWindow();
+            MainWindow = new MainWindow()
+            {
+                DataContext = new YouTubeViewerViewModel()
+            };
             MainWindow.Show();
             base.OnStartup(e);
         }

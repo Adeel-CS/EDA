@@ -46,7 +46,6 @@
                                                 <StackPanel.Resources>
                                                     <Style  TargetType="Button">
                                                         <Setter Property="Background" Value="#f0f0f0"/>
-                                                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
                                                         <Setter Property="Padding" Value="20 10"/>
                                                         <Setter Property="Cursor" Value="Hand"/>
                                                         <Setter Property="Template">

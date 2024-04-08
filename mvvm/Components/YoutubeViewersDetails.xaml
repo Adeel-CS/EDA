@@ -36,7 +36,7 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Column="0" FontWeight="Bold"
                                Text="Is Member"/>
-                    <TextBlock Grid.Column="1" Text="Yes" Margin="20 0 0 0"/>
+                    <TextBlock Grid.Column="1" Text="{Binding IsMemberDisplay}" Margin="20 0 0 0"/>
                 </Grid>
 
             </Grid>

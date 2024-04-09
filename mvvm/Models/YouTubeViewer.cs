@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mvvm.Models
 {
-    class YouTubeViewer
+    public class YouTubeViewer
     {
         public YouTubeViewer(string username, bool isSubscribed, bool isMember)
         {

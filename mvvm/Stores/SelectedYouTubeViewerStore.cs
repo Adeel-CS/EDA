@@ -9,7 +9,7 @@ namespace mvvm.Stores
 {
     class SelectedYouTubeViewerStore
     {
-        private YouTubeViewer? _selectedYouTubeViewer;
+        private YouTubeViewer _selectedYouTubeViewer;
         public YouTubeViewer SelectedYouTubeViewer
         {
             get

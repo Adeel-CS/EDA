@@ -19,13 +19,24 @@ namespace mvvm.ViewModels
         public string IsSubscribedDisplay => (SelectedYouTubeViewer?.IsSubscribed ?? false) ? "Yes" : "No";
         public string IsMember => (SelectedYouTubeViewer?.IsMember ?? false) ? "Yes" : "No";
 
-        public string IsMemberDisplay { get; }
+        public string IsMemberDisplay => (SelectedYouTubeViewer?.IsMember ?? false) ? "Yes" : "No";
 
         public YouTubeViewersDetailsViewModel(SelectedYouTubeViewerStore selectedYouTubeViewerStore)
         {
 
             _selectedYouTubeViewerStore = selectedYouTubeViewerStore;
+            _selectedYouTubeViewerStore.SelectedYouTubeViewerChanged += SelectedYouTubeViewerStore_SelectedYouTubeViewerChanged;
+
         }
 
+        private void SelectedYouTubeViewerStore_SelectedYouTubeViewerChanged()
+        {
+            //OnPropertyChanged(nameof(SelectedYouTubeViewer));
+            OnPropertyChanged(nameof(HasSelectedYouTubeViewer));
+            OnPropertyChanged(nameof(Username));
+            OnPropertyChanged(nameof(IsMemberDisplay));
+            OnPropertyChanged(nameof(IsSubscribedDisplay));
+
+        }
     }
 }

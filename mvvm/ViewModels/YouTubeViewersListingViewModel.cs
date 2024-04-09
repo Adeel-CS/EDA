@@ -27,7 +27,7 @@ namespace mvvm.ViewModels
             {
                 _selectedYouTubeViewerListingItemViewModel = value;
                 OnPropertyChanged(nameof(SelectedYouTubeViewerListingItemViewModel));
-                _selectedYouTubeViewerListingItemViewModel.SelectedYouTubeViewer = _selectedYouTubeViewerListingItemViewModel.YouTubeViewer;
+                _selectedYouTubeViewerListingItemViewModel.SelectedYouTubeViewer = _selectedYouTubeViewerListingItemViewModel?.YouTubeViewer;
             }
         }
 
